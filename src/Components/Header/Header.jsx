@@ -42,8 +42,10 @@ const Header = () => {
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/allitems'>Art & Craft</NavLink></li>
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/additem'>Add Craft</NavLink></li>
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/mylist'>MyList</NavLink></li>
-                        <li className="md:hidden"><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/login'>Log In</NavLink></li>
-                        <li className="md:hidden"><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/register'>Register</NavLink></li>
+                        {user ? <></> : <li className="md:hidden"><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/login'>Log In</NavLink></li> }
+                        {user ? <></> : <li className="md:hidden"><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/register'>Register</NavLink></li> }
+                        
+                        
                     </ul>
                 </div>              
                 <div className="flex gap-2 md:gap-4   md:w-auto items-center justify-end">
