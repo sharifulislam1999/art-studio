@@ -42,6 +42,8 @@ const Header = () => {
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/allitems'>Art & Craft</NavLink></li>
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/additem'>Add Craft</NavLink></li>
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/mylist'>MyList</NavLink></li>
+                        <li className="md:hidden"><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/login'>Log In</NavLink></li>
+                        <li className="md:hidden"><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/register'>Register</NavLink></li>
                     </ul>
                 </div>              
                 <div className="flex gap-2 md:gap-4   md:w-auto items-center justify-end">
@@ -59,8 +61,10 @@ const Header = () => {
                             </div>}
                         </div>
                     :  loader ? <div className="my-4 flex justify-center"><span className="loading loading-ring loading-sm"></span></div> :<div className="flex gap-3">
+                    <div className="hidden md:flex gap-2">
                     <Link to="/login" className="bg-[#0A7EF5] text-white px-4 py-1 rounded-lg text-base font-medium">LogIn</Link>
-                    <Link to="/register" className="px-4 py-1 rounded-lg text-base bg-[#0A7EF5] text-white font-medium">Register</Link>  
+                    <Link to="/register" className="px-4 py-1 rounded-lg text-base bg-[#0A7EF5] text-white font-medium">Register</Link>    
+                    </div>  
                  </div>}
                      
                      <div className="flex">

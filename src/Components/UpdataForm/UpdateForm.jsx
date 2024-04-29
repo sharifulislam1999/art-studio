@@ -46,6 +46,8 @@ const UpdateForm = () => {
                 setTimeout(()=>{
                     navigate("/mylist")
                 },800)
+            }else if(data.modifiedCount === 0){
+                errorMsg("No Changed");
             }
         })
 
