@@ -2,16 +2,16 @@ import { useContext, useEffect, useState } from "react";
 import { MyAuth } from "../../Firebase/AuthProvier";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 const UpdateForm = () => {
     const [category,setCategory] = useState([])
     const item = useLoaderData();
+    const navigate = useNavigate()
     useEffect(()=>{
         fetch('http://localhost:5000/category')
         .then(res=> res.json())
         .then(data => setCategory(data));
     },[])
-    const {user} = useContext(MyAuth);
     const errorMsg = (msg)=>{
         toast.error(msg)
     }
@@ -43,6 +43,9 @@ const UpdateForm = () => {
         .then(data => {
             if(data.modifiedCount === 1){
                 successMsg("Update Success");
+                setTimeout(()=>{
+                    navigate("/mylist")
+                },800)
             }
         })
 
