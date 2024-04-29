@@ -6,7 +6,9 @@ import { useEffect, useState } from "react";
 import CategoryCard from "../../Components/CategoryCard/CategoryCard";
 import Accordian from "../../Components/Accordian/Accordian";
 import Testimonail from "../../Components/Progress/Testimonail";
+
 const Home = ()=>{
+    document.title="Home | Art Studio"
     const [category,setCategory] = useState([]);
     const items = useLoaderData();
     useEffect(()=>{
@@ -18,6 +20,7 @@ const Home = ()=>{
     return (
         <>
         <Slider></Slider>
+        
         <div className="container mx-auto px-3">
             <Title title="Feature Craft Item" description="Explore our curated collection of exquisite handcrafted treasures. From intricate embroidery to stunning beadwork, each piece is a testament to craftsmanship and beauty. Find your perfect statement piece today."></Title>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">

@@ -5,11 +5,12 @@ import Select from 'react-select'
 import Banner from "../../Components/Banner/Banner";
 
 const Mylist = ()=>{
+    document.title="My Items"
     const [myList,setMyList] = useState([]);
     const [filter,setFilter] = useState([]);
     const {user} = useContext(MyAuth);
     useEffect(()=>{
-        fetch(`http://localhost:5000/items/${user.email}`)
+        fetch(`http://localhost:5000/items/${user.email || "Github Provider"}`)
         .then(res=> res.json())
         .then(data => {
             setMyList(data);

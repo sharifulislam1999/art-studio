@@ -88,10 +88,10 @@ const UpdateForm = () => {
                         <h1 className="text-base text-[#5e6064]">Customizable</h1>
                         <div className="flex gap-3 p-[6px] border border-[#5e6064] rounded-xl">
                     <div className="flex items-center gap-3">
-                    <input type="radio" name="customizeable" value="yes" className="radio" /> <span>Yes</span>
+                    <input type="radio" name="customizeable" value="yes" className="radio" defaultChecked={item.customizeable === "yes"} /> <span>Yes</span>
                     </div>
                     <div className="flex items-center gap-3">
-                    <input type="radio" name="customizeable" value="no" className="radio" /> <span>No</span>
+                    <input type="radio" name="customizeable" value="no" className="radio" defaultChecked={item.customizeable === "no"} /> <span>No</span>
                     </div>
                     </div>
                     </div>

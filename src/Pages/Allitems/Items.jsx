@@ -1,6 +1,7 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../../Components/Banner/Banner";
 const Items = ()=>{
+  document.title="All Craft Items";
     const items = useLoaderData()
     return (
         <>

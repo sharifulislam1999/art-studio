@@ -17,6 +17,7 @@ const Header = () => {
     const handleProfile = ()=>{
         setProfile(!profile)
     }
+   
     return (
         <div className="py-4 relative border-b">
            <div className="container mx-auto px-3">
@@ -41,8 +42,6 @@ const Header = () => {
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/allitems'>Art & Craft</NavLink></li>
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/additem'>Add Craft</NavLink></li>
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/mylist'>MyList</NavLink></li>
-                        <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/extra'>Extra 1</NavLink></li>
-                        <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/extra1'>Extra 2</NavLink></li>
                     </ul>
                 </div>
               
@@ -50,12 +49,12 @@ const Header = () => {
                     {user ? 
                         <div className="relative">
                             <div>
-                                <img onMouseEnter={handleProfile} className=" w-10 md:w-12 rounded-full inline-block border-2 cursor-pointer border-[#0A7EF5]" src={user.photoURL} alt="" />
+                                <img onMouseEnter={handleProfile} className=" w-10 h-10 md:h-12 md:w-12 rounded-full inline-block border-2 cursor-pointer border-[#0A7EF5]" src={user.photoURL} alt="" />
                             </div>
-                           {profile &&  <div onMouseLeave={handleProfile} className="absolute z-50 -bottom-[105px] -right-2 w-[200px] p-2 border bg-white rounded-xl">
+                           {profile &&  <div onMouseLeave={handleProfile} className="absolute z-50 -bottom-[102px] -right-2 w-[200px] p-2 border bg-white rounded-xl">
                             <div className="space-y-4">
-                                <h1 className="text-center text-xl font-bold">{user.displayName}</h1>
-                                <button onClick={handleLogOut} className="py-2 w-full bg-[#0A7EF5] font-bold text-white rounded-lg">Log Out</button>
+                                <h1 className="text-center md:text-xl font-bold">{user.displayName}</h1>
+                                <button onClick={handleLogOut} className="py-1 md:py-2 w-full bg-[#0A7EF5] font-normal text-white rounded-lg">Log Out</button>
                                
                             </div>
                             </div>}

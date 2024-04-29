@@ -25,7 +25,7 @@ const SimpleForm = () => {
         const photo = form.photo.value;
         const stock = form.stock.value;
         const description = form.description.value;
-        const item = {itemName,category,price,rating,customizeable,time,photo,description,stock,useremail:user?.email,userName:user?.displayName}
+        const item = {itemName,category,price,rating,customizeable,time,photo,description,stock,useremail:user?.email || "Github Provider",userName:user?.displayName}
         console.log(item)
         fetch("http://localhost:5000/additem",{
             method: "POST",
