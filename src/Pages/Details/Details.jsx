@@ -1,8 +1,14 @@
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
+import { MyAuth } from "../../Firebase/AuthProvier";
+import Header from "../../Components/Header/Header";
 
 const Details = ()=>{
+    const {user} = useContext(MyAuth)
     const {itemName,category,price,rating,customizeable,time,photo,description,stock} = useLoaderData();
     return (
+        <>
+        {user && <Header></Header>}
         <div className="container mx-auto px-3 mt-10 md:mt-20">
             <div className="flex gap-8 flex-col md:flex-row items-center">
                 <div className="flex-1">
@@ -44,6 +50,7 @@ const Details = ()=>{
 
             </div>
         </div>
+        </>
     );
 }
 export default Details;

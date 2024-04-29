@@ -123,7 +123,7 @@ const RegisterForm = () => {
             <div className="flex justify-center mt-4">
               <div className="space-y-3">
               <div className="text-center text-xl font-semibold">
-                    <h1>Log in With</h1>
+                    <h1>Register With</h1>
                 </div>
                 <div className="flex justify-center">
                 <div className="flex">

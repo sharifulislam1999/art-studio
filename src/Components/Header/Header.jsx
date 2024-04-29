@@ -43,8 +43,7 @@ const Header = () => {
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/additem'>Add Craft</NavLink></li>
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/mylist'>MyList</NavLink></li>
                     </ul>
-                </div>
-              
+                </div>              
                 <div className="flex gap-2 md:gap-4   md:w-auto items-center justify-end">
                     {user ? 
                         <div className="relative">
@@ -66,7 +65,6 @@ const Header = () => {
                      
                      <div className="flex">
                      <input type="checkbox" onChange={handleTheme} className="toggle toggle-md" />
-                     
                      </div>
                 </div>
             </div>

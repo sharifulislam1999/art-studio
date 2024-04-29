@@ -3,6 +3,7 @@ import { MyAuth } from "../../Firebase/AuthProvier";
 import MylistCard from "../../Components/MylistCard/MylistCard";
 import Select from 'react-select'
 import Banner from "../../Components/Banner/Banner";
+import Header from "../../Components/Header/Header";
 
 const Mylist = ()=>{
     document.title="My Items"
@@ -37,6 +38,7 @@ const Mylist = ()=>{
     }
     return (
         <>
+        {user && <Header></Header>}
          <Banner title="My List"></Banner>       
         <div className="container mx-auto px-3 mt-10"> 
        <div className="space-y-2 my-5">

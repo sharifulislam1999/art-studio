@@ -23,8 +23,7 @@ const SliderA = ({ data }) => {
             cursorStyle='_'
             typeSpeed={70}
             deleteSpeed={50}
-            delaySpeed={1000}
-            
+            delaySpeed={1000}                 
           /></h1>
             </div>
             <div className="text-base md:text-lg">

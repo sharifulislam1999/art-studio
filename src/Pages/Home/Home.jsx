@@ -2,13 +2,16 @@ import { useLoaderData } from "react-router-dom";
 import Slider from "../../Components/Slider/Slider";
 import Title from "../../Components/Title/Title";
 import CraftCard from "../../Components/CraftCard.jsx/CraftCard";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CategoryCard from "../../Components/CategoryCard/CategoryCard";
 import Accordian from "../../Components/Accordian/Accordian";
 import Testimonail from "../../Components/Progress/Testimonail";
+import { MyAuth } from "../../Firebase/AuthProvier";
+import Header from "../../Components/Header/Header";
 
 const Home = ()=>{
     document.title="Home | Art Studio"
+    const {user} = useContext(MyAuth)
     const [category,setCategory] = useState([]);
     const items = useLoaderData();
     useEffect(()=>{
@@ -19,6 +22,7 @@ const Home = ()=>{
     },[])
     return (
         <>
+        {user && <Header></Header>}
         <Slider></Slider>
         
         <div className="container mx-auto px-3">

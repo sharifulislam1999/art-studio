@@ -1,10 +1,15 @@
 import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../../Components/Banner/Banner";
+import { useContext } from "react";
+import { MyAuth } from "../../Firebase/AuthProvier";
+import Header from "../../Components/Header/Header";
 const Items = ()=>{
+  const {user} = useContext(MyAuth)
   document.title="All Craft Items";
     const items = useLoaderData()
     return (
         <>
+         {user && <Header></Header>}
         <Banner title="All Art & Craft"></Banner>
         <div className="container mx-auto px-3 mt-10">
             <div>

@@ -1,11 +1,16 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import SingleCategory from "../../Components/SingleCategory/SingleCategory";
+import { useContext } from "react";
+import { MyAuth } from "../../Firebase/AuthProvier";
+import Header from "../../Components/Header/Header";
 
 const Category = () => {
     const categorys = useLoaderData();
     const {name} = useParams();
+    const {user} = useContext(MyAuth)
     return (
         <>
+         {user && <Header></Header>}
         <div className="py-8 bg-[#0A7EF5] text-white">
             <div className="container mx-auto px-3">
                 <div className="space-y-4">
