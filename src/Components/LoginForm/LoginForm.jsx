@@ -63,7 +63,7 @@ const LoginForm = () => {
             },300)
         })
         .catch(()=>{
-            errorMsg("Log in Faild")
+            // errorMsg("Log in Faild")
         })
     }
     const handleGithubLogin = () =>{
@@ -73,7 +73,7 @@ const LoginForm = () => {
             successMsg("Log In Success")
         })
         .catch(()=>{
-            errorMsg("Log in Faild")
+            // errorMsg("Log in Faild")
         })
     }
     return (

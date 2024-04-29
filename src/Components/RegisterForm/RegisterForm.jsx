@@ -3,7 +3,7 @@ import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import githubImg from '../../assets/icons/google.png'
 import googleImg from '../../assets/icons/github.png'
 import { MyAuth } from "../../Firebase/AuthProvier";
@@ -13,8 +13,9 @@ const RegisterForm = () => {
     const {createUser,signPop} = useContext(MyAuth)
     const [eye,setEye] = useState(true);
     const passwordRef = useRef()
-    const handleEye = ()=>{
-      
+    const location = useLocation()
+    const navigate = useNavigate();
+    const handleEye = ()=>{      
         if(eye){
             passwordRef.current.type="text"
         }else{
@@ -48,9 +49,12 @@ const RegisterForm = () => {
            })
            .then(()=>{
             successMsg("Registation Success")
+            setTimeout(()=>{
+                navigate(location.state ? location.state : "/") 
+            },800)
            })
            .catch(()=>{
-            errorMsg("Registation Failed")
+            // errorMsg("Registation Failed")
            })
         })
         .catch(error=>{
@@ -65,9 +69,12 @@ const RegisterForm = () => {
         signPop(provider)
         .then(()=>{
             successMsg("Registation Success");
+            setTimeout(()=>{
+                navigate(location.state ? location.state : "/") 
+            },800)
         })
         .catch(()=>{
-            errorMsg("Registation Failed")
+            // errorMsg("Registation Failed")
         })
        
     }
@@ -76,9 +83,12 @@ const RegisterForm = () => {
         signPop(provider)
         .then(()=>{
             successMsg("Registation Success");
+            setTimeout(()=>{
+                navigate(location.state ? location.state : "/") 
+            },800)
         })
         .catch(()=>{
-            errorMsg("Registation Failed")
+            // errorMsg("Registation Failed")
         })
     }
     return (
