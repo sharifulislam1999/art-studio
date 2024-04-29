@@ -16,7 +16,7 @@ const Details = ()=>{
                 </div>
                 <div className="flex-1 space-y-4">
                     <div>
-                        <h1 className="text-3xl font-bold">{itemName}</h1>
+                        <h1 className="text-xl md:text-3xl font-bold">{itemName}</h1>
                     </div>                    
                     <div>
                         <h1 className="text-2xl font-normal">Price: {price} BDT</h1>
@@ -24,7 +24,7 @@ const Details = ()=>{
                     <div>
                         <p>{description}</p>
                     </div>
-                    <table className="table border text-center">
+                    {/* <table className="table border text-center">
                         <thead className="">
                             <tr>
                                 <th className="border">Category</th>
@@ -43,7 +43,24 @@ const Details = ()=>{
                                 <td className="border">{stock}</td>
                             </tr>
                         </tbody>
-                    </table>
+                    </table> */}
+                    <div className="border">
+                        <div className="border-b py-3 px-2">
+                            <h1>Category: {category}</h1>
+                        </div>
+                        <div  className="border-b py-3 px-2">
+                            <h1>Rating: {rating} star</h1>
+                        </div>
+                        <div  className="border-b py-3 px-2">
+                            <h1>Customizable: {customizeable}</h1>
+                        </div>
+                        <div  className="border-b py-3 px-2">
+                            <h1>Prepare Time: {time} Days</h1>
+                        </div>
+                        <div  className="py-3 px-2">
+                            <h1>Stock : {stock}</h1>
+                        </div>
+                    </div>
                     
                                    
                 </div>
