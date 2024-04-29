@@ -19,12 +19,12 @@ const Route = createBrowserRouter([
         children:[
           {
             path: '/',
-            loader: ()=>fetch('http://localhost:5000/items'),
+            loader: ()=>fetch('https://b9a10-server-ecru.vercel.app/items'),
             element: <Home></Home>
           },
           {
             path:'/allitems',
-            loader: ()=>fetch('http://localhost:5000/items'),
+            loader: ()=>fetch('https://b9a10-server-ecru.vercel.app/items'),
             element: <Items></Items>
           },
           {
@@ -41,22 +41,22 @@ const Route = createBrowserRouter([
           },
           {
             path:'/update/:id',
-            loader:({params})=>fetch(`http://localhost:5000/update/${params.id}`),
+            loader:({params})=>fetch(`https://b9a10-server-ecru.vercel.app/update/${params.id}`),
             element: <PrivateRoute><Update></Update></PrivateRoute>
           },
           {
             path:'/additem',
-            loader: ()=>fetch("http://localhost:5000/category"),
+            loader: ()=>fetch("https://b9a10-server-ecru.vercel.app/category"),
             element: <PrivateRoute><Additem></Additem></PrivateRoute>
           },
           {
             path:'/category/:name',
-            loader: ({params})=>fetch(`http://localhost:5000/category/${params.name}`),
+            loader: ({params})=>fetch(`https://b9a10-server-ecru.vercel.app/category/${params.name}`),
             element: <Category></Category>
           },
           {
             path:'/details/:id',
-            loader: ({params})=>fetch(`http://localhost:5000/details/${params.id}`),
+            loader: ({params})=>fetch(`https://b9a10-server-ecru.vercel.app/details/${params.id}`),
             element: <PrivateRoute><Details></Details></PrivateRoute>
           }
          

@@ -11,7 +11,7 @@ const Mylist = ()=>{
     const [filter,setFilter] = useState([]);
     const {user} = useContext(MyAuth);
     useEffect(()=>{
-        fetch(`http://localhost:5000/items/${user.email || "Github Provider"}`)
+        fetch(`https://b9a10-server-ecru.vercel.app/items/${user.email || "Github Provider"}`)
         .then(res=> res.json())
         .then(data => {
             setMyList(data);
@@ -23,7 +23,6 @@ const Mylist = ()=>{
         { value: 'customizable', label: 'Customizable' },
         { value: 'noncustomizable', label: 'Non Customizable' },
       ];
-      console.log(filter)
     const selectChange = (e)=>{
         if(e.value === "customizable"){
             const filterList = myList.filter((item) => item.customizeable === 'yes'); 

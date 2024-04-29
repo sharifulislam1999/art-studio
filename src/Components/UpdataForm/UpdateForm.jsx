@@ -8,7 +8,7 @@ const UpdateForm = () => {
     const item = useLoaderData();
     const navigate = useNavigate()
     useEffect(()=>{
-        fetch('http://localhost:5000/category')
+        fetch('https://b9a10-server-ecru.vercel.app/category')
         .then(res=> res.json())
         .then(data => setCategory(data));
     },[])
@@ -32,7 +32,7 @@ const UpdateForm = () => {
         const description = form.description.value;
         const updatedItem = {itemName,category,price,rating,customizeable,time,photo,description,stock}
         console.log(item)
-        fetch(`http://localhost:5000/update/${item._id}`,{
+        fetch(`https://b9a10-server-ecru.vercel.app/update/${item._id}`,{
             method: "PUT",
             headers:{
                 'content-type': 'application/json'

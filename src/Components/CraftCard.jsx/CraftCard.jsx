@@ -74,6 +74,6 @@ const CraftCard = ({item}) => {
     );
 };
 CraftCard.propTypes = {
-    item: PropTypes.obj
+    item: PropTypes.object
 }
 export default CraftCard;

@@ -23,7 +23,7 @@ const MylistCard = ({item,setFilter,total}) => {
             confirmButtonText: "Yes, delete it!"
           }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/delete/${_id}`,{
+                fetch(`https://b9a10-server-ecru.vercel.app/delete/${_id}`,{
                     method:"DELETE"
                 })
                 .then(res => res.json())
@@ -98,7 +98,7 @@ const MylistCard = ({item,setFilter,total}) => {
                     <IoMdTimer/>
                 </div>
                 <div>
-                <h1>{time}</h1>
+                <h1>{time} Days</h1>
                 </div>
             </div>
            </div>

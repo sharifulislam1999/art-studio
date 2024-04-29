@@ -15,7 +15,7 @@ const Home = ()=>{
     const [category,setCategory] = useState([]);
     const items = useLoaderData();
     useEffect(()=>{
-        fetch("http://localhost:5000/category")
+        fetch("https://b9a10-server-ecru.vercel.app/category")
         .then(res=>res.json())
         .then(data => setCategory(data));
         

@@ -27,7 +27,7 @@ const SimpleForm = () => {
         const description = form.description.value;
         const item = {itemName,category,price,rating,customizeable,time,photo,description,stock,useremail:user?.email || "Github Provider",userName:user?.displayName}
         console.log(item)
-        fetch("http://localhost:5000/additem",{
+        fetch("https://b9a10-server-ecru.vercel.app/additem",{
             method: "POST",
             headers:{
                 'content-type': 'application/json'

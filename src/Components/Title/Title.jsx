@@ -2,7 +2,7 @@ import { PropTypes } from 'prop-types';
 import { Fade } from "react-awesome-reveal";
 const Title = ({title,description}) => {
     return (
-        <div className='text-center space-y-4 my-28'>
+        <div className='text-center space-y-4 my-20 md:my-28'>
             <Fade direction='up' duration="1300">
             <h1 className='text-3xl md:text-5xl font-bold text-[#0A7EF5]'>{title}</h1>
             </Fade>
@@ -13,7 +13,7 @@ const Title = ({title,description}) => {
     );
 };
 Title.propTypes = {
-    title: PropTypes.str,
-    description: PropTypes.str
+    title: PropTypes.string,
+    description: PropTypes.string
 }
 export default Title;
