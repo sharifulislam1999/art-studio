@@ -63,9 +63,15 @@ const UpdateForm = () => {
                 </div>
                 <div>
                     <h1 className="text-base text-[#5e6064] mb-1">Category</h1>
-                   <select name="category" className="border rounded-xl border-[#5e6064] py-1 px-2 focus:outline-none w-full" id="" required>
-                    <option value="">Select One</option>
-                    {category.map((cate,i)=> <option key={i}  value={cate.name}>{cate.name}</option> )}
+                   <select defaultValue={item.category} name="category" className="border rounded-xl border-[#5e6064] py-1 px-2 focus:outline-none w-full" id="" required>
+                    <option >Select One</option>
+                    {/* {category.map((cate,i)=> <option key={i}  value={cate.name}>{cate.name}</option> )} */}
+                    <option value="Beadwork">Beadwork</option>
+                    <option value="Embroidery">Embroidery</option>
+                    <option value="Macrame">Macrame</option>
+                    <option value="Knitting & Crocheting">Knitting & Crocheting</option>
+                    <option value="Quilting">Quilting</option>
+                    <option value="Tie-Dyeing">Tie-Dyeing</option>
                    </select>
                 </div>                        
             </div>
@@ -82,7 +88,7 @@ const UpdateForm = () => {
                         <h1 className="text-base text-[#5e6064]">Customizable</h1>
                         <div className="flex gap-3 p-[6px] border border-[#5e6064] rounded-xl">
                     <div className="flex items-center gap-3">
-                    <input type="radio" name="customizeable" value="yes" className="radio" checked /> <span>Yes</span>
+                    <input type="radio" name="customizeable" value="yes" className="radio" /> <span>Yes</span>
                     </div>
                     <div className="flex items-center gap-3">
                     <input type="radio" name="customizeable" value="no" className="radio" /> <span>No</span>
@@ -95,7 +101,7 @@ const UpdateForm = () => {
                     </div>
                     <div>
                         <h1 className="text-base text-[#5e6064]">Stock</h1>
-                        <select name="stock" id="" className="border rounded-xl border-[#5e6064] py-1 px-2 focus:outline-none w-full" required>
+                        <select name="stock" defaultValue={item.stock} id="" className="border rounded-xl border-[#5e6064] py-1 px-2 focus:outline-none w-full" required>
                             <option value="">Select One</option>
                             <option value="In Stock">In Stock</option>
                             <option value="Made to order">Made to order</option>
