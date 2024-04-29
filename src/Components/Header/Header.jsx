@@ -39,7 +39,7 @@ const Header = () => {
                 <div className={`absolute md:w-auto ${menu ? 'left-2' : '-left-48'} duration-150 md:border-l-0 border-l-4 border-l-[#0A7EF5] top-16 bg-white md:bg-transparent z-20 text-left  md:static`}>
                     <ul className="px-2 md:px-0  flex-col md:flex-row flex text-base gap-2 md:gap-5 text-[#081722e]">
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/'>Home</NavLink></li>
-                        <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/allitems'>Art & Craft</NavLink></li>
+                        <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/allitems'>Art & Crafts</NavLink></li>
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/additem'>Add Craft</NavLink></li>
                         <li><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/mylist'>MyList</NavLink></li>
                         {user ? <></> : <li className="md:hidden"><NavLink onClick={()=>setMenu(!menu)} className={({isActive})=> isActive ? "active" : "pending"} to='/login'>Log In</NavLink></li> }

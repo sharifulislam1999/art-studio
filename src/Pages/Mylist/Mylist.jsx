@@ -11,7 +11,7 @@ const Mylist = ()=>{
     const [filter,setFilter] = useState([]);
     const {user} = useContext(MyAuth);
     useEffect(()=>{
-        fetch(`https://b9a10-server-ecru.vercel.app/items/${user.email || "Github Provider"}`)
+        fetch(`https://b9a10-server-ecru.vercel.app/items/${user?.email || `githubprovider@${user?.displayName}`}`)
         .then(res=> res.json())
         .then(data => {
             setMyList(data);
