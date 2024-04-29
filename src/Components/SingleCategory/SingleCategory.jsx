@@ -8,10 +8,11 @@ import { Link } from 'react-router-dom';
 const SingleCategory = ({item}) => {
     const {_id,itemName,category,price,rating,customizeable,time,photo,description,stock} = item;
     return (
-        <div className="rounded-xl border">
+        <div className="rounded-xl flex flex-col border">
            <div>
                 <img className='w-full h-[235px] object-cover rounded-t-xl' src={photo} alt="" />
            </div>
+
            <div className='p-2 md:p-4 flex flex-col  space-y-2'>
            <div className='text-xl md:text-2xl font-semibold'>
                 <h1> {itemName}</h1>
@@ -57,17 +58,17 @@ const SingleCategory = ({item}) => {
                     <IoMdTimer/>
                 </div>
                 <div>
-                <h1>{time}</h1>
+                <h1>{time} Days</h1>
                 </div>
             </div>
-           </div>
-           <div className='flex-grow'>
+           </div>           
+            </div>
+            <div className='flex-grow p-2 md:p-4'>
             <h1>{description}</h1>
            </div>
-           <div>
+           <div className='p-2 md:p-4'>
             <Link to={`/details/${_id}`} className='px-4 py-2 bg-[#0A7EF5] text-white rounded-full text-base font-normal inline-block'>View Details</Link>
            </div>
-            </div>
           
                         
         </div>

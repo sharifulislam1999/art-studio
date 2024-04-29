@@ -58,7 +58,7 @@ const CraftCard = ({item}) => {
                     <IoMdTimer/>
                 </div>
                 <div>
-                <h1>{time}</h1>
+                <h1>{time} Days</h1>
                 </div>
             </div>
            </div>         
