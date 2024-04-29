@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.rokkitt{
+  font-family: "Outfit", sans-serif;
+}
+.own-btn{
+  @apply px-3  lg:px-4 py-1 lg:py-2 rounded-lg duration-500 bg-[#0A7EF5] border-2 border-[#0A7EF5] hover:text-white hover:bg-transparent hover:border-[#0A7EF5] text-white text-base lg:text-lg;
+}
