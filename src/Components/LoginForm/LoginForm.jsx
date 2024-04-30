@@ -71,6 +71,9 @@ const LoginForm = () => {
         signPop(provider)
         .then(()=>{
             successMsg("Log In Success")
+            setTimeout(()=>{
+                navigate(location.state ? location.state : "/")
+            },300)
         })
         .catch(()=>{
             // errorMsg("Log in Faild")
