@@ -3,7 +3,7 @@
 Welcome to Art Studio Website! Please Visit my live site [here](https://b910-f0f4b.firebaseapp.com/).
 
 ## Category
-Type-2 -- Textile Arts
+Type-2 -- Art and Craft Store (Textile Arts)
 
 ## Features
 

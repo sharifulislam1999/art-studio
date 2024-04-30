@@ -59,7 +59,6 @@ const Route = createBrowserRouter([
             loader: ({params})=>fetch(`https://b9a10-server-ecru.vercel.app/details/${params.id}`),
             element: <PrivateRoute><Details></Details></PrivateRoute>
           }
-         
         ]
     }
   ])
