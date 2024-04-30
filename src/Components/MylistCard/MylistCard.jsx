@@ -6,7 +6,7 @@ import { AiOutlineStock } from "react-icons/ai";
 import { IoMdTimer } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
-const MylistCard = ({item,setFilter,total}) => {
+const MylistCard = ({item,setFilter,total,setMyList}) => {
     const navigate = useNavigate();
     const goUpdatePage = ()=>{
         navigate(`/update/${_id}`);        
@@ -29,9 +29,10 @@ const MylistCard = ({item,setFilter,total}) => {
                 .then(res => res.json())
                 .then(data => {
                     if(data.deletedCount === 1){
-                        const remaining = total.filter(item => item._id !== _id );
-                        setFilter(remaining);             
-                    
+                        const remaining = total.filter(item => item._id !== _id);
+                        const totalremain = total.filter(item => item._id !== _id);
+                        setFilter(remaining);            
+                        setMyList(totalremain);        
                       Swal.fire({
                         title: "Deleted!",
                         text: "Your file has been deleted.",
@@ -108,18 +109,19 @@ const MylistCard = ({item,setFilter,total}) => {
            </div>
 
            <div className='flex gap-3 p-2 md:p-4'>
-            <button onClick={()=>goUpdatePage(_id)}  className='px-4 py-2 bg-[#0A7EF5] text-white rounded-full text-base font-normal inline-block'>Update</button>
-            <button onClick={()=>handleDelete(_id,customizeable)} className='px-4 py-2 bg-red-500 text-white rounded-full text-base font-normal inline-block'>Delete</button>
+            <button onClick={()=>goUpdatePage(_id)} className='px-4 py-2 bg-[#0A7EF5] text-white rounded-full text-base font-normal inline-block'>Update</button>
+            <button onClick={()=>handleDelete(_id)} className='px-4 py-2 bg-red-500 text-white rounded-full text-base font-normal inline-block'>Delete</button>
            </div>        
                         
         </div>
     );
 };
 MylistCard.propTypes = {
-    item: PropTypes.obj,
+    item: PropTypes.object,
     myList: PropTypes.array,
-    setMyList: PropTypes.func,
+    setFilter: PropTypes.func,
     load: PropTypes.bol,
-    setLoad: PropTypes.func
+    total:PropTypes.array,
+    setMyList: PropTypes.func
 }
 export default MylistCard;

@@ -9,6 +9,7 @@ const Mylist = ()=>{
     document.title="My Items"
     const [myList,setMyList] = useState([]);
     const [filter,setFilter] = useState([]);
+    const [loader,setLoader] = useState(true);
     const {user} = useContext(MyAuth);
     useEffect(()=>{
         fetch(`https://b9a10-server-ecru.vercel.app/items/${user?.email || `githubprovider@${user?.displayName}`}`)
@@ -16,6 +17,7 @@ const Mylist = ()=>{
         .then(data => {
             setMyList(data);
             setFilter(data);
+            setLoader(false)
         })
     },[])
     const options = [
@@ -46,8 +48,9 @@ const Mylist = ()=>{
         <Select options={options} onChange={selectChange} />
         </div>          
        </div>
+       {loader && <span className="loading loading-ring loading-lg"></span>}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filter.map((item,i)=><MylistCard key={i} total={myList} setFilter={setFilter} item={item}></MylistCard>)}
+            {filter.map((item,i)=><MylistCard key={i} total={myList} setMyList={setMyList} setFilter={setFilter} item={item}></MylistCard>)}
         </div>
         </div>
         </>
