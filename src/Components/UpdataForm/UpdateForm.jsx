@@ -84,7 +84,7 @@ const UpdateForm = () => {
                     </div>
                     <div>
                     <h1 className="text-base text-[#5e6064]">Rating</h1>
-                        <input name="rating" type="number" defaultValue={item.rating} className="border rounded-xl border-[#5e6064] py-1 px-2 focus:outline-none w-full" placeholder="Rating"  required/>
+                        <input name="rating" type="text" defaultValue={item.rating} className="border rounded-xl border-[#5e6064] py-1 px-2 focus:outline-none w-full" placeholder="Rating"  required/>
                     </div>
                     <div>
                         <h1 className="text-base text-[#5e6064]">Customizable</h1>
