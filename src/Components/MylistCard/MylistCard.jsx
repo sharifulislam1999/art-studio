@@ -105,7 +105,7 @@ const MylistCard = ({item,setFilter,total,setMyList}) => {
            </div>
             </div>
             <div className='flex-grow p-2 md:p-4'>
-            <h1>{description}</h1>
+            <h1>{(description.length > 200 ? description.slice(0,200) +"..." : description )}</h1>
            </div>
 
            <div className='flex gap-3 p-2 md:p-4'>

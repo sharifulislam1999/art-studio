@@ -79,7 +79,7 @@ const UpdateForm = () => {
             </div>
             <div className="grid mt-4 grid-cols-1 lg:grid-cols-5 gap-4">
                     <div>
-                    <h1 className="text-base text-[#5e6064]">Price</h1>
+                    <h1 className="text-base text-[#5e6064]">Price (BDT)</h1>
                         <input name="price" type="number" defaultValue={item.price} className="border rounded-xl border-[#5e6064] py-1 px-2 focus:outline-none w-full" placeholder="Price" required />
                     </div>
                     <div>
@@ -98,7 +98,7 @@ const UpdateForm = () => {
                     </div>
                     </div>
                     <div>
-                    <h1 className="text-base text-[#5e6064]">Processing Time</h1>
+                    <h1 className="text-base text-[#5e6064]">Processing Time (Days)</h1>
                     <input name="time" type="text" defaultValue={item.time} className="border rounded-xl border-[#5e6064] py-1 px-2 focus:outline-none w-full" placeholder="Processing Time" required />                       
                     </div>
                     <div>

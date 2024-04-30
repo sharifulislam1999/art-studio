@@ -64,7 +64,7 @@ const CraftCard = ({item}) => {
            </div>         
             </div>
             <div className='flex-grow p-2 md:p-4 '>
-            <h1>{description}</h1>
+            <h1>{(description.length > 200 ? description.slice(0,200) +"..." : description )}</h1>
            </div>
            <div className='p-2 md:p-4 '>
             <Link to={`/details/${_id}`} className='px-4 py-2 bg-[#0A7EF5] text-white rounded-full text-base font-normal inline-block'>View Details</Link>
