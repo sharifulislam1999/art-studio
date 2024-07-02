@@ -3,7 +3,7 @@
 Welcome to Art Studio Website! Please Visit my live site [here](https://b910-f0f4b.firebaseapp.com/).
 
 ## Server Repo
-Server: [here]([https://b910-f0f4b.firebaseapp.com/](https://github.com/sharifulislam1999/art-studio-server))
+Server: [here]([https://b910-f0f4b.firebaseapp.com/](https://github.com/sharifulislam1999/art-studio-server)
 
 ## Features
 
