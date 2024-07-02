@@ -17,3 +17,8 @@ Server: [here](https://github.com/sharifulislam1999/art-studio-server)
 - **React-simple-typewriter**: Use (Home Slider) 
 - **React Awesome Reveal**: Use (Home page title section)
 
+
+## Test Instruction (terminal)
+1.  npm i
+2.  environment variable [shariful.feb1999@gmail.com]
+3.  npm run dev
